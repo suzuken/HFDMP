@@ -6,6 +6,10 @@ Head First DMP, for our colleagues.
 
 `make install`
 
+## Requirements
+
+php 5.4 or later
+
 ## Usage
 
 1. Set up `supply` service for certain domains.

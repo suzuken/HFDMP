@@ -13,3 +13,7 @@ ci: php-cs-fixer test
 php-cs-fixer:
 	$(PHP_BIN) php-cs-fixer.phar fix ./lib --level=all
 	$(PHP_BIN) php-cs-fixer.phar fix ./t --level=all
+
+start-supply:
+	$(PHP_BIN) -S localhost:8081 -t public_html/s.php
+
