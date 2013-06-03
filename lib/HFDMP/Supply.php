@@ -2,7 +2,6 @@
 namespace HFDMP;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-use Monolog\Formatter\JsonFormatter;
 
 class Supply
 {

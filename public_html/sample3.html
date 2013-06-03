@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sample 3</title>
+    <script type="text/javascript">
+        (function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost:8081/d.php?seg=hoge', true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState === 4 && xhr.status === 200){
+                    if(JSON.parse(xhr.responseText).success === 1){
+                        document.write("you're re-targeted.");
+                    }
+                    else{
+                        document.write("you are not re-targeted.");
+                    }
+                }
+            }
+            xhr.send(null);
+         })();
+    </script>
+</head>
+<body>
+    <h1>sample 3</h1>
+</body>
+</html>
