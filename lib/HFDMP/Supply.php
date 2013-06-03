@@ -2,6 +2,7 @@
 namespace HFDMP;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
+use Monolog\Formatter\JsonFormatter;
 
 class Supply
 {
@@ -26,10 +27,11 @@ class Supply
 
     public function log()
     {
-        $log = new Logger('name');
+        $log = new Logger();
         $stream = new StreamHandler(__DIR__ . '/../../log/your.log', Logger::DEBUG);
+        $stream->setFormatter(new JsonFormatter());
         $log->pushHandler($stream);
-        $log->addInfo("hoge");
+        $log->addInfo("test", array_merge($_SERVER, $_COOKIE));
     }
 
     public function output()

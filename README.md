@@ -15,7 +15,7 @@ php 5.4 or later
 1. Set up `supply` service for certain domains.
 1. And then, run `deliver` service on your localhost.
 1. Create script element for loading `supply` on your web-site.
-1. Confirm logs outputted.
+1. Confirm logs outputted. Log is put into `log` directory.
 
 ## For your reference
 

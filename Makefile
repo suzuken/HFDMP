@@ -23,4 +23,3 @@ php-cs-fixer:
 
 start-supply:
 	$(PHP_BIN) -S localhost:8081 -t public_html
-
